@@ -1,0 +1,6 @@
+django-admin startproject todo_list .
+python manage.py startapp base
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser
+
