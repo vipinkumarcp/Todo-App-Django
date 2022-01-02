@@ -14,8 +14,8 @@
 <hr>
 
 <form method="GET">
-    <input type="text" name='search-area'>
-    <input type="submit" value='Search'>
+    <input type="text" name="search-area" value="{{search_input}}">
+    <input class="button" type="submit" value='Search'>
 </form>
 <table>
 <tr>
@@ -23,10 +23,9 @@
 <th></th>
 </tr>
 {{objects_list}}
-    {% for task in object_list %}
+    {% for task in tasks %}
     <tr>
         <td>{{task.title}}</td>
-        <td><a href="{% url 'task' task.id %}">View</a></td>
         <td><a href="{% url 'task-update' task.id %}">Update</a></td>
         <td><a href="{% url 'task-delete' task.id %}">Delete</a></td>
 
